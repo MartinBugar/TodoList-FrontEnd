@@ -22,10 +22,12 @@ function User() {
 fetchItems();
   },[]);
 
+
   const[users,setItems] = useState([]);
 
 const fetchItems = async () => {
     const data = await fetch ('http://localhost:8080/restuser');
+
     const users = await data.json();
     console.log(data);
     setItems(users);  
@@ -38,7 +40,7 @@ const fetchItems = async () => {
     <div class="col ">
       <div class="card">  
         <div class="card-body">
-          <h4 className= "text-center">Users List</h4>
+          <h4 className= "text-center">Users list</h4>
              <div class="table-responsive">
                <table className="table table-striped">
                  <thead>
