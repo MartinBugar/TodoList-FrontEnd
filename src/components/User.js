@@ -40,7 +40,7 @@ const fetchItems = async () => {
     <div class="col ">
       <div class="card">  
         <div class="card-body">
-          <h4 className= "text-center">Users list</h4>
+          <h4 className= "text-center">Users LisT</h4>
              <div class="table-responsive">
                <table className="table table-striped">
                  <thead>
