@@ -24,7 +24,7 @@ export default class UserTaskCreate extends React.Component {
     event.preventDefault();
     alert('user was submited ');
 
-    axios.post(`http://localhost:8080/task`,{
+    axios.post(`https://martyxtodolist.herokuapp.com/task`,{
       userId : this.props.match.params.id,
       name : this.state.name,
       status : this.state.status,

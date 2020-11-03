@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function deleteTask (id) {
   if (window.confirm('Are you sure')){
-      fetch('http://localhost:8080/task/'+id, {
+      fetch('https://martyxtodolist.herokuapp.com/task/'+id, {
         method:'DELETE',
         header:{'Accept':'application/json',
         'Content-Type':'application/json'
@@ -31,7 +31,7 @@ super(props)
   
   
   componentDidMount() {
-    axios.get(`http://localhost:8080/task/usertask/`+this.props.match.params.id)
+    axios.get(`https://martyxtodolist.herokuapp.com/task/usertask/`+this.props.match.params.id)
       .then(res => {
         const tasks = res.data;
         this.setState( {tasks});

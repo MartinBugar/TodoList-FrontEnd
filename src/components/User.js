@@ -5,8 +5,10 @@ import { Button } from 'reactstrap';
 import axios from 'axios';
 
 function deleteUser (id) {
+
+
 if (window.confirm('Are you sure')){
-    fetch('http://localhost:8080/restuser/'+id, {
+    fetch('https://martyxtodolist.herokuapp.com/restuser/'+id, {
       method:'DELETE',
       header:{'Accept':'application/json',
       'Content-Type':'application/json'
@@ -26,7 +28,7 @@ fetchItems();
   const[users,setItems] = useState([]);
 
 const fetchItems = async () => {
-    const data = await fetch ('http://localhost:8080/restuser');
+    const data = await fetch ('https://martyxtodolist.herokuapp.com/restuser');
 
     const users = await data.json();
     console.log(data);

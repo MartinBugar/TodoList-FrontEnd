@@ -25,7 +25,7 @@ super(props)
   
   
   componentDidMount() {
-    axios.get(`http://localhost:8080/task/`+this.props.match.params.taskId)
+    axios.get(`https://martyxtodolist.herokuapp.com/task/`+this.props.match.params.taskId)
       .then(res => {
         const task = res.data;
         this.setState( {task});
@@ -46,7 +46,7 @@ super(props)
     
     
 
-    axios.patch(`http://localhost:8080/task/`+this.props.match.params.taskId, {
+    axios.patch(`https://martyxtodolist.herokuapp.com/task/`+this.props.match.params.taskId, {
       name : this.state.name,
       status : this.state.status,
       category : this.state.category,

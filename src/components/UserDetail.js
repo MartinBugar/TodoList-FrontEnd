@@ -17,7 +17,7 @@ function UserDetail({match}) {
   );
 
   const fetchItem = async () => {
-    const data = await fetch (`http://localhost:8080/restuser/${match.params.id}`);
+    const data = await fetch (`https://martyxtodolist.herokuapp.com/restuser/${match.params.id}`);
     const user = await data.json();
     const id = user.id;
     setItem(user);

@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default class CreateUser extends React.Component {
 
+ 
+
   constructor(props){
     super(props);
   this.state = {name: ''};
@@ -24,7 +26,7 @@ export default class CreateUser extends React.Component {
     event.preventDefault();
     alert('user was submited ');
 
-    axios.post(`http://localhost:8080/restuser`,{
+    axios.post(`https://martyxtodolist.herokuapp.com/restuser`,{
       name : this.state.name,
       surname : this.state.surname,
       nickName : this.state.nickName,

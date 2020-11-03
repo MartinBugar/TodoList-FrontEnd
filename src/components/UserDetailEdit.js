@@ -26,7 +26,7 @@ super(props)
   
   
   componentDidMount() {
-    axios.get(`http://localhost:8080/restuser/`+this.props.match.params.id)
+    axios.get(`https://martyxtodolist.herokuapp.com/restuser/`+this.props.match.params.id)
       .then(res => {
         const user = res.data;
         this.setState( {user});
@@ -47,7 +47,7 @@ super(props)
     
     
 
-    axios.patch(`http://localhost:8080/restuser/`+this.props.match.params.id, {
+    axios.patch(`https://martyxtodolist.herokuapp.com/restuser/`+this.props.match.params.id, {
       name : this.state.name,
       surname : this.state.surname,
       nickName : this.state.nickName,
