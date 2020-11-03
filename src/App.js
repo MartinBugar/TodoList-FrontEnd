@@ -10,6 +10,7 @@ import UserTasksEdit from './components/UserTasksEdit';
 import UserTasks from './components/UserTasks';
 import CreateUser from './components/CreateUser';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import 'react-app-polyfill/stable';
 
 function App() {
   return (
