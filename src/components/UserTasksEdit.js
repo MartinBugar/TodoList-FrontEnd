@@ -11,7 +11,7 @@ export default class UserTasksEdit extends React.Component {
  
 
 
-
+//construktor
   constructor(props){
 super(props)
   this.state = {name: ''};
@@ -19,6 +19,7 @@ super(props)
   this.state = {category: ''};
   this.state = {description: ''};
   this.state = {task: ''};
+
   }
 
   
