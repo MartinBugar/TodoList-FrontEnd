@@ -5,6 +5,7 @@ import { Button } from 'reactstrap';
 import axios from 'axios';
 
 function deleteUser (id) {
+  
 
 
 if (window.confirm('Are you sure')){

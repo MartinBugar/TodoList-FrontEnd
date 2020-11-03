@@ -1,0 +1,36 @@
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    background :rgb(0, 0, 0);
+    color: white;
+  }
+  
+  
+.nav-links{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: right;
+    list-style: none;
+  }
+
+  .navbar-logo {
+    color: #fff;
+    justify-self: start;
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    max-width: 1500px;
+  }
