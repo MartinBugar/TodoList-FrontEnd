@@ -29,16 +29,14 @@ export default class UserDetailEdit extends React.Component {
     }
 
     handleSubmit(defaultValue) {
-        // event.preventDefault();
         alert('user was submited ');
-
         axios.patch(`http://localhost:8080/restuser/` + this.props.match.params.id, {
             name: this.state.name == null ? defaultValue.name : this.state.name,
-            surname: this.state.surname == null ? defaultValue.name : this.state.surname,
-            nickName: this.state.nickName == null ? defaultValue.name : this.state.nickName,
-            email: this.state.email == null ? defaultValue.name : this.state.email,
-            age: this.state.age == null ? defaultValue.name : this.state.age,
-            password: this.state.password == null ? defaultValue.name : this.state.password,
+            surname: this.state.surname == null ? defaultValue.surname : this.state.surname,
+            nickName: this.state.nickName == null ? defaultValue.nickName : this.state.nickName,
+            email: this.state.email == null ? defaultValue.email : this.state.email,
+            age: this.state.age == null ? defaultValue.age : this.state.age,
+            password: this.state.password == null ? defaultValue.password : this.state.password,
         })
             .then(res => {
                 console.log(res);
