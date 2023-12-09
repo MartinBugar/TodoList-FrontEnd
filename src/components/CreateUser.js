@@ -26,7 +26,7 @@ export default class CreateUser extends React.Component {
     event.preventDefault();
     alert('user was submited ');
 
-    axios.post(`https://martyxtodolist.herokuapp.com/restuser`,{
+    axios.post(`http://localhost:8080/restuser`,{
       name : this.state.name,
       surname : this.state.surname,
       nickName : this.state.nickName,

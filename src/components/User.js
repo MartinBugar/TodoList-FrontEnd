@@ -9,7 +9,7 @@ function deleteUser (id) {
 
 
 if (window.confirm('Are you sure')){
-    fetch('https://martyxtodolist.herokuapp.com/restuser/'+id, {
+    fetch('http://localhost:8080/restuser/'+id, {
       method:'DELETE',
       header:{'Accept':'application/json',
       'Content-Type':'application/json'
@@ -29,7 +29,7 @@ fetchItems();
   const[users,setItems] = useState([]);
 
 const fetchItems = async () => {
-    const data = await fetch ('https://martyxtodolist.herokuapp.com/restuser');
+    const data = await fetch ('http://localhost:8080/restuser');
 
     const users = await data.json();
     console.log(data);
@@ -86,7 +86,7 @@ const fetchItems = async () => {
        ))}
      </table>
      <div class="col-3 text-left">
-     <Link to={`/user/create`}><a  class="btn btn-sm btn-primary">Create new Task <i class="far fa-edit ml-1"></i></a> </Link>
+     <Link to={`/user/create`}><a  class="btn btn-sm btn-primary">Create new User <i class="far fa-edit ml-1"></i></a> </Link>
      
      </div>
     
