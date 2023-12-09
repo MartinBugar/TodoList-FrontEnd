@@ -84,7 +84,7 @@ export default class UserTaskCreate extends React.Component {
                         </div>
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-lg btn-block"><strong>CREATE USER</strong></button>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block"><strong>CREATE TASK</strong></button>
 
                 </form>
             </div>

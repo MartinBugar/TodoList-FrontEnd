@@ -20,7 +20,6 @@ export default class UserTasks extends React.Component {
 
     constructor(props) {
         super(props)
-
         this.state = {tasks: []};
     }
 
@@ -34,19 +33,13 @@ export default class UserTasks extends React.Component {
 
     render() {
         let id = this.props.match.params.id;
-
-        let url = this.props.location.search;
-        let params = queryString.parse(url);
-        console.log(params);
-
-
         return (
-            <div class="container">
+            <div className="container">
                 <form onSubmit={this.handleSubmit}>
-                    <div class="row">
-                        <div class="col ">
-                            <div class="card">
-                                <div class="card-body">
+                    <div className="row">
+                        <div className="col ">
+                            <div className="card">
+                                <div className="card-body">
                                     <h4 className="text-center">Tasks List of User with ID: {id}</h4>
                                     <div class="table-responsive">
                                         <table className="table table-striped">
@@ -59,43 +52,32 @@ export default class UserTasks extends React.Component {
                                                 <th scope="col"><strong>Category</strong></th>
                                                 <th scope="col"><strong>Description</strong></th>
                                                 <th scope="col-5"></th>
-
-
                                             </tr>
-
                                             </thead>
                                             {this.state.tasks.map(task => (
-
                                                 <tbody>
-                                                <tr key={task.id}>
-                                                    <th scope="row"><Link to={`/user/${task.id}`}>{task.id}</Link></th>
-                                                    <td>{task.userId}</td>
-                                                    <td>{task.name}</td>
-                                                    <td>{task.status}</td>
-                                                    <td>{task.category}</td>
-                                                    <td>{task.description}</td>
-                                                    <td>
-
-                                                        <Link to={`/user/${task.userId}/usertasks/edit/${task.id}`}><a
-                                                            class="btn btn-sm btn-primary ">Edit Task<i
-                                                            class="far fa-edit ml-1"></i></a> </Link>
-                                                        <a onClick={() => deleteTask(task.id)}
-                                                           class="btn btn-sm btn-danger ">Delete task<i
-                                                            class="far fa-edit"></i></a></td>
-
-                                                </tr>
-
+                                                <td>{task.id}</td>
+                                                <td>{task.userId}</td>
+                                                <td>{task.name}</td>
+                                                <td>{task.status}</td>
+                                                <td>{task.category}</td>
+                                                <td>{task.description}</td>
+                                                <td>
+                                                    <Link to={`/user/${task.userId}/usertasks/edit/${task.id}`}><a
+                                                        className="btn btn-sm btn-primary ">Edit Task<i
+                                                        className="far fa-edit ml-1"></i></a> </Link>
+                                                    <a onClick={() => deleteTask(task.id)}
+                                                       className="btn btn-sm btn-danger ">Delete task<i
+                                                        className="far fa-edit"></i></a></td>
                                                 </tbody>
-
                                             ))}
                                         </table>
 
                                         <div class="col-3 text-left">
-                                            <Link to={`/user/${id}/usertasks/create`}><a class="btn btn-sm btn-primary">Create
-                                                new Task <i class="far fa-edit ml-1"></i></a> </Link>
-
+                                            <Link to={`/user/${id}/usertasks/create`}><a
+                                                className="btn btn-sm btn-primary">Create
+                                                new Task <i className="far fa-edit ml-1"></i></a> </Link>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -103,7 +85,6 @@ export default class UserTasks extends React.Component {
                     </div>
                 </form>
             </div>
-
         )
     }
 }
