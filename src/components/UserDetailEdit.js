@@ -38,18 +38,9 @@ export default class UserDetailEdit extends React.Component {
             age: this.state.age == null ? defaultValue.age : this.state.age,
             password: this.state.password == null ? defaultValue.password : this.state.password,
         })
-            .then(res => {
-                console.log(res);
-                console.log(res.data)
-            })
     }
 
     render() {
-        let id = this.props.match.params.id;
-        let url = this.props.location.search;
-        let params = queryString.parse(url);
-        console.log(params);
-
         return (
             <div className="container">
                 <form onSubmit={() => this.handleSubmit(this.state.user)}>
@@ -136,8 +127,6 @@ export default class UserDetailEdit extends React.Component {
                     </button>
                 </form>
             </div>
-
-
         )
     }
 }
